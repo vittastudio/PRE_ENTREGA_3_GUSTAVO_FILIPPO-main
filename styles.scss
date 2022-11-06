@@ -1,0 +1,405 @@
+@mixin listas {
+    color: $color__fondo;
+    text-decoration: none;
+}
+$color__fondo: black;
+$color__tipografia:white;
+$size_h1: 60px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $color__fondo;
+    font-family: 'Outfit', sans-serif;
+    color: $color__tipografia;
+}
+main{
+    margin{
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 40px;
+}
+
+h1 {
+    font-size: 60px;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {font-size: 40px; 
+}
+h3 {font-size: 20px
+}
+nav ul li {
+    display: inline;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 20px;
+}   
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+.menu{
+    width: 97px;
+}
+
+/* index.html*/
+.titulo {
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 170px;
+}
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+.botones{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        color: white;
+        text-align: center;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+.b1{
+    font-size: 25px;
+    color: white;
+    width: 214px;
+    height: 214px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.b2{
+    font-size: 25px;
+    margin-top: 1px;
+    width: 214px;
+    height: 214px;
+    margin-bottom:15px;
+}
+.b3{
+    font-size: 25px;
+    width: 214px;
+    height: 214px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+.b4{
+    font-size: 25px;
+    width: 214px;
+    height: 214px;
+    margin-bottom: 4px;
+}
+
+
+/* discos.html */
+
+.discos {
+    margin-top: 90px;
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+}
+.tapa {
+    animation: saltar 2s 1;
+    display: inline-block;
+    transform: translatey(0);
+    display: flex;
+    flex: nowrap;
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 0;
+    margin-left: 0;
+    
+}
+@keyframes saltar{
+    50%{
+        transform: translateY(0);
+    }
+    0%{
+        transform: translateY(100px);
+    }
+}
+.subtitulo{
+    text-align: center;
+}
+.lista{
+    margin-top: -10px;
+    margin-left: -30px;
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
+}
+
+/*transicion*/
+div#contenedor1 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    -webkit-transition: width 1s ease-in-out 0s, height 1s ease-in-out 1s;
+}
+div#contenedor1:hover{
+    width: 900px;
+    height: 400px;
+}
+
+/*videos*/
+.videos{
+    margin-top: 90px;
+}
+.grid__videos{
+display: grid;
+grid-row: 720px 720px;
+justify-content: center;
+}
+
+/* noticias.html */
+.noticias { 
+    margin-top: 90px;
+}
+   
+.news {
+    display: grid;
+    grid-template-rows: 150px 150px 150px 150px;
+    padding: 0;
+    margin: auto;
+    margin-top: 60px;
+    width: 70%;
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+}
+
+/*shows*/
+.shows { 
+    margin-top: 90px;
+}
+.grid__shows{
+    display: grid;
+    grid-template-rows: 150px 150px 150px 150px;
+    padding: 0;
+    margin: auto;
+    margin-top: 60px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    list-style: none;
+}
+.s1{
+    background-color: white;
+    color: black;
+}
+.s3{
+    background-color: white;
+    color: black;
+}
+
+/*contacto*/
+.contacto{
+    margin-top: 90px;
+}
+.formulario{
+    text-align: center;
+}
+.enviar{
+    margin-top: -15px;
+    font-size: 20px;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-style: none;
+}
+.aviso{
+    margin-top: 15px;
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 50px;
+        display: flex;
+        flex{
+            direction:column;
+        }
+        width: 100%;
+        text-align: center;
+    }
+    .contenedor {
+        display: flex;
+        flex:{
+            direction:row;
+            justify-content: center;
+        }
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+    .b1{
+        font-size: 18px;
+        width: 170px;
+        height: 170px;
+        margin:{
+            top: 1px;
+            bottom: 1px;
+            right: 5px;
+        }
+    }
+    .b2{
+        font-size: 18px;
+        width: 170px;
+        height: 170px;
+        margin{
+            bottom: 1px;
+            right: 15px;
+        }
+    }
+    .b3{
+        font-size: 18px;
+        width: 170px;
+        height: 170px;
+        margin:{
+            top: 1px;
+            right: 5px;
+        }
+    }
+    .b4{
+        font-size: 18px;
+        width: 170px;
+        height: 170px;
+        margin{
+            right: 15px;
+        }
+    }
+    nav ul li {
+        display: inline;
+        align-self: center;
+        padding: 3px 3px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /*discos*/
+    h2{
+        font-size: 30px;
+    }
+    .discos{
+        justify-content: center;
+        margin:{
+            left: 3px;
+            top: 150px;
+        }
+    }
+    .tapa {
+        max:{
+            width: 200px;
+            height: 200px;
+        }
+        margin:auto;
+    }
+    .subtitulo {
+        margin-top: 15px;
+    }
+    .lista{
+        margin-top: -15px;
+    }
+}
+
+    /*noticias*/
+    .news {
+        font-size: 20px;
+    }
+    .n1{
+        margin-top: 20px;
+    }
+    .n2{
+        margin-top: 40px;
+    }
+    .n3{
+        margin-top: 140px;
+        font-size: 30px;
+    }
+    .n4{
+        margin-top: 140px;
+        font-size: 30px;
+    }
+    /*videos*/
+    .grid__videos{
+        display: grid;
+        grid: row: 360px 360px;
+        justify-content: center;
+        margin-top: -30px;
+    iframe{
+        max-width: 360px;
+    }
+
+    /*shows*/
+    .grid__shows{
+        display: grid;
+        grid: {
+                rows: 150px 150px 150px 150px;
+        }
+        padding: 0;
+        margin: auto;
+        margin-top: 60px;
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+        list-style: none;
+        }
